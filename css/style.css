@@ -1,56 +1,70 @@
 /* ===================== */
 /* COMMON CSS */
-body{
-    background: #e2d3d3;
-    font-family: sans-serif,arial,Helvetica;
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --dark-color: #212529;
+    --light-bg: #f8f9fa;
+    --border-color: #dee2e6;
+    --brand-yellow: #FFC107;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    min-height: 100vh;
 }
 
 a:hover,
-a:hover,
-a:focus{
+a:focus {
     text-decoration: none;
     outline: none;
 }
+
 .btn:focus,
-button:focus{
+button:focus {
     outline: none;
 }
 
-ul{
-    margin:0;
-    padding:0;
-    list-style:none;
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-h2.page-heading{
-  margin: 5px 0 30px;
-  padding: 0 5px 10px;
-  border-bottom: 2px solid #333;
+h2.page-heading {
+    margin: 5px 0 30px;
+    padding: 15px 20px;
+    border-left: 4px solid var(--primary-color);
+    background-color: rgba(13, 110, 253, 0.05);
+    border-radius: 4px;
+    font-weight: 600;
+    color: var(--dark-color);
 }
 
 /* ===================== */
-
+/* ADMIN Panel CSS */
 /* ===================== */
-/* ADMIN Panel CSS START */
-/* ===================== */
-
-#wrapper-admin{
+#wrapper-admin {
     padding: 100px 0 0;
 }
 
-img.logo{
+img.logo {
     width: 98%;
     height: auto;
     display: block;
 }
 
-#header-admin{
+#header-admin {
     background: #79b0f7;
     text-align: left;
     padding: 15px;
 }
 
-#header-admin .admin-logout{
+#header-admin .admin-logout {
     margin: 10px 0;
     color: rgb(175, 148, 148);
     font-size: 18px;
@@ -59,22 +73,25 @@ img.logo{
     display: inline-block;
 }
 
-#header-admin .admin-logout:hover{
+#header-admin .admin-logout:hover {
     text-decoration: underline;
     background-color: rgb(88, 88, 146);
 }
 
-#admin-menubar{
+#admin-menubar {
     background-color: #424947;
 }
-#admin-menubar .admin-menu{
+
+#admin-menubar .admin-menu {
     font-size: 0;
 }
-#admin-menubar .admin-menu li{
+
+#admin-menubar .admin-menu li {
     display: inline-block;
     margin: 0 5px 0 0;
 }
-#admin-menubar .admin-menu li a{
+
+#admin-menubar .admin-menu li a {
     color: #18ddeb;
     font-size: 16px;
     font-weight: 600;
@@ -84,22 +101,22 @@ img.logo{
     transition: all 0.3s;
 }
 
-#admin-menubar .admin-menu li a:hover{
+#admin-menubar .admin-menu li a:hover {
     color: #533939;
     background-color: #24a3b1;
 }
 
-#admin-content{
+#admin-content {
     padding: 20px 0;
     min-height: 750px;
 }
 
-#admin-content .admin-heading{
+#admin-content .admin-heading {
     font-size: 35px;
     margin: 0 0 15px;
 }
 
-#admin-content .add-new{
+#admin-content .add-new {
     color: #fff;
     background-color: #26b226;
     font-size: 15px;
@@ -107,27 +124,27 @@ img.logo{
     text-align: center;
     text-transform: uppercase;
     padding: 7px 10px;
-    /* margin: 0 0 20px; */
     display: block;
     transition: all 0.3s;
 }
-#admin-content .add-new:hover{
+
+#admin-content .add-new:hover {
     text-shadow: 0 0 3px #000;
-    box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
-#admin-content .content-table{
+#admin-content .content-table {
     border: 1px solid #000;
     width: 100%;
     margin: 0 0 20px;
 }
 
-#admin-content .content-table thead{
+#admin-content .content-table thead {
     color: #e9c7c7;
     background-color: #333;
 }
 
-#admin-content .content-table th{
+#admin-content .content-table th {
     padding: 10px;
     border: 1px solid #fff;
     font-weight: 600;
@@ -135,425 +152,450 @@ img.logo{
     text-transform: uppercase;
 }
 
-#admin-content .content-table tbody{
+#admin-content .content-table tbody {
     color: #333;
 }
 
-#admin-content .content-table tbody tr{
+#admin-content .content-table tbody tr {
     background-color: #e7e7e7;
 }
-#admin-content .content-table tbody tr:nth-child(even){
+
+#admin-content .content-table tbody tr:nth-child(even) {
     background-color: transparent;
 }
-#admin-content .content-table tbody td{
+
+#admin-content .content-table tbody td {
     padding: 10px;
     border: 1px solid #fff;
     text-align: center;
-
 }
 
-#admin-content .content-table tbody td:nth-child(2){
+#admin-content .content-table tbody td:nth-child(2) {
     text-align: left;
 }
 
-#admin-content .admin-pagination{
+#admin-content .admin-pagination {
     margin: 0;
 }
-#admin-content .admin-pagination li a{
+
+#admin-content .admin-pagination li a {
     display: block;
 }
 
 .id,
 .edit,
-.delete{
-    text-align:center;
-}
-
-form{
-    background: #fff;
-    padding: 25px;
-    box-shadow:0 1px 3px rgba(0, 0, 0, 0.13);
-}
-
-/* ===================== */
-/* ADMIN Panel CSS END */
-/* ===================== */
-
-/* ===================== */
-/* FrontEnd CSS START */
-/* ===================== */
-
-/* Header Styling */
-#header{
-    background: #79b0f7;
-    text-align: left;
-    padding: 15px;
-}
-
-
-#logo{
-    display: inline-block;
-    width: 65%;
-}
-
-#logo img{
-    width: 100%;
-    
-}
-
-/* Menubar Styling */
-#menu-bar{
-    background: #333;
+.delete {
     text-align: center;
 }
 
-#menu-bar .menu > li{
-    display: inline-block;
+/* ===================== */
+/* FrontEnd CSS */
+/* ===================== */
+
+/* Section Header */
+.section-header {
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 15px;
 }
 
-.menu > li > a{
-    padding: 10px 20px;
-    display: block;
-    text-transform: uppercase;
-    color: #18ddeb;
-    font-size: 15px;
-    font-weight:600;
-    transition:all 0.5s ease 0s;
-}
-
-#menu-bar .menu > li > a:hover,
-#menu-bar .menu > li > a.active{
-    color:#2d2d42;
-    background:#24a3b1;
+.section-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #212529;
 }
 
 /* Main Content Styling */
-#main-content{
-    padding: 30px 0;
+#main-content {
+    padding: 40px 0;
     min-height: 750px;
 }
 
-#main-content .post-container{
-    background-color:#f5ecce;
+#main-content .post-container {
+    background-color: #fff;
+    padding: 0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#main-content .post-content {
+    border-bottom: 1px solid var(--border-color);
     padding: 25px;
-    box-shadow: 0 1px 3px rgba(3, 0, 5, 0.13);
+    margin-bottom: 0;
 }
 
-#main-content .post-content{
-    border-bottom: 1px solid #d1d1d1;
-    padding: 0 0 30px;
-    margin-bottom:30px;
+#main-content .post-content:last-child {
+    border-bottom: none;
 }
 
-#main-content .post-content img{
-  width: 100%;
+#main-content .post-content img {
+    width: 100%;
+    border-radius: 6px;
 }
 
-#main-content .post-content .post-img{
-  border: 3px solid #e7e7e7;
-  display: block;
-  height: 145px;
-  overflow: hidden;
-  transition: border .3s;
-}
-#main-content .post-content .post-img:hover{
-  border: 3px solid #1e90ff;
-}
-#main-content .post-content .inner-content{
-     border: 1px solid #000; 
+#main-content .post-content .post-img {
+    display: block;
+    height: 200px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    margin-bottom: 15px;
 }
 
-#main-content .post-content h3{
-    font-size: 21px;
+#main-content .post-content .post-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.15);
+}
+
+#main-content .post-content h3 {
+    font-size: 22px;
     line-height: 28px;
     font-weight: 600;
-    margin: 0 0 7px;
-
-}
-#main-content .post-content h3 a{
-    color: #1e90ff;
-    transition:all 0.3s;
-}
-#main-content .post-content h3 a:hover{
-    color:#333;
+    margin: 0 0 15px;
+    color: var(--dark-color);
 }
 
-#main-content .post-content .post-information span{
-    color: #606060;
-    font-size: 12px;
+#main-content .post-content h3 a {
+    color: var(--primary-color);
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+#main-content .post-content h3 a:hover {
+    color: var(--dark-color);
+}
+
+#main-content .post-content .post-information span {
+    color: #666;
+    font-size: 13px;
     text-transform: capitalize;
-    margin: 0 5px 5px 0;
+    margin: 0 15px 10px 0;
     display: inline-block;
 }
 
-#main-content .post-content .post-information i{
-    color: #1e90ff;
-    margin-right: 1px;
+#main-content .post-content .post-information i {
+    color: var(--primary-color);
+    margin-right: 5px;
+    width: 16px;
 }
 
-#main-content .post-content .post-information a{
-    color: #606060;
-    text-decoration: none;
-}
-
-#main-content .post-content .post-information a:hover{
-    color: #333;
-    text-decoration: none;
-}
-
-#main-content .post-content p,
-#main-content .single-post p{
-    color: #666;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    margin:0 0 10px;
-}
-
-#main-content .post-content a.read-more{
+#main-content .post-content a.read-more {
     color: #fff;
-    background-color: #333333;
-    font-size: 12px;
-    text-transform: capitalize;
-    padding: 3px 8px;
-    border-radius: 2px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0a58ca 100%);
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 4px;
     transition: all 0.3s;
-}
-
-#main-content .post-content a.read-more:hover{
-    color: #fff;
-    background-color: #352323;
-}
-
-#main-content .single-post{
-    border: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-#main-content .single-post h3{
-    color: #1e90ff;
-}
-
-#main-content .single-post .post-information{
-    margin: 0 0 10px;
-}
-#main-content .single-post p{
-    text-align: justify;
-}
-
-#main-content .single-post img.single-feature-image{
-    width: 70%;
-    margin: 0 auto 20px;
-    display: block;
-    border: 3px solid #e7e7e7;
-}
-
-/* Pagination  Styling */
-.pagination {
-    display: block;
-    text-align: center;
-    margin: 0;
-}
-
-.pagination li {
-    display:inline-block;
-    margin: 0 5px 0 0;
-}
-
-.pagination li a{
-    border: none;
-    background: #1e90ff;
-    color: #fff;
-}
-
-.pagination li a:hover,
-.pagination > li > a:focus{
-    color:#fff;
-    background:#333;
-}
-
-.page_links {
-    background-color: #ccc;
-    font-family: arial, verdana;
-    font-size: 12px;
-    text-decoration: none;
-    border:1px solid #000;
-    padding: 6px;
-    margin: 3px;
-}
-
-#page_a_link{
-    font-size: 12px;
-    border:1px #000000 solid;
-    color:#000;
-    background-color: #cccccc;
-    padding: 6px;
-    margin: 3px;
+    display: inline-block;
+    font-weight: 600;
     text-decoration: none;
 }
 
-i.fa{
-    color:#222;
+#main-content .post-content a.read-more:hover {
+    background: linear-gradient(135deg, #0a58ca 0%, #0d3b66 100%);
+    box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
+    transform: translateY(-2px);
 }
 
 /* Sidebar Styling */
-#sidebar h4{
-    color: #12157e;
-    font-size: 17px;
-    line-height: 27px;
-    font-weight:600;
+#sidebar h4 {
+    color: var(--dark-color);
+    font-size: 18px;
+    font-weight: 700;
     text-transform: uppercase;
-    padding: 0 0 0 5px;
-    margin: 0 0 21px;
-    border-left: 3px solid #1e5c9b;
+    padding: 15px 20px;
+    margin: 0 0 20px;
+    border-left: 4px solid var(--primary-color);
+    background-color: var(--light-bg);
+    border-radius: 4px;
 }
 
-#sidebar .search-box-container{
+#sidebar .search-box-container {
     background-color: #fff;
-    padding: 20px;
+    padding: 25px;
     margin: 0 0 30px;
-    box-shadow: 0 1px 3px rgba(175, 18, 18, 0.13);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
 }
 
-#sidebar .search-post{
-    padding: 0;
-}
-#sidebar .search-post input{
-    color: #606060;
-}
-#sidebar .search-post input:focus{
-    box-shadow: none;
-    border-color: #999;
+#sidebar .search-post input {
+    color: #333;
+    border: 1px solid var(--border-color);
+    padding: 10px 15px;
+    border-radius: 4px;
 }
 
-#sidebar .search-post .btn{
-    font-weight: 600;
-    text-transform: uppercase;
-    padding: 6px 8px;
-    background-color: #333333;
-    border-color: #333333;
-    outline: none;
-}
-
-#sidebar .search-post .btn:hover,
-#sidebar .search-post .btn:focus{
-    text-shadow: 0 0 3px #333;
-}
-
-#sidebar .search-post i.fa{
-    font-size: 16px;
-    color: #999999;
-    line-height: 40px;
-    float:right;
-}
-
-#sidebar .recent-post-container{
-    padding: 20px;
+#sidebar .recent-post-container {
+    padding: 25px;
     background: #fff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
 }
 
-#sidebar .recent-post{
-    border-bottom: 1px solid #e7e7e7;
+#sidebar .recent-post {
+    border-bottom: 1px solid var(--border-color);
     padding: 0 0 15px;
     margin: 0 0 15px;
-}
-
-#sidebar .recent-post:last-child{
-    margin: 0;
-    padding: 0;
-    border: none;
-}
-
-#sidebar .recent-post .post-img{
-  display: inline-block;
-  width: 33%;
-  border: 3px solid rgba(0,0,0,0.3);
-  vertical-align: top;
-  transition: border .3s;
-}
-
-#sidebar .recent-post .post-img:hover{
-  border: 3px solid #1e90ff;
-}
-
-#sidebar .recent-post .post-img img{
-    width: 100%;
-}
-
-#sidebar .recent-post .post-content{
-    width: 65%;
-    display: inline-block;
-    border: none;
-    padding: 0 0 0 7px;
-    margin: 0;
-}
-
-#sidebar .recent-post h5{
-    font-size: 14px;
-    line-height: 20px;
-    margin: 0 0 5px;
-}
-#sidebar .recent-post h5 a{
-    color: #1E90FF;
-}
-
-#sidebar .recent-post span{
-    color: #666;
-    font-size: 11px;
-    display: inline-block;
-    margin: 0 5px 10px 0;
-}
-
-#sidebar .recent-post span a{
-    color: #666;
-}
-#sidebar .recent-post span i{
-    color: #1E90FF;
-}
-
-#sidebar .recent-post a.read-more{
-    color: #666;
-    background-color: rgba(0,0,0,0.09);
-    width: 65px;
-    font-size: 11px;
-    text-align: center;
-    padding: 0;
-    display: block;
-    transition: all 0.3s;
-}
-
-#sidebar .recent-post a.read-more:hover{
-    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    display: flex;
+    gap: 12px;
 }
 
 /* Footer Styling */
-#footer{
-    color: #f5f5ef;
-    padding:15px 0;
-    text-align:center;
-    background-color:#1dbde6;
+#footer {
+    color: #fff;
+    padding: 50px 0 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #212529 0%, #343a40 100%);
+    margin-top: 60px;
 }
 
-#footer  a{
-    font-size: 15px;
-    color:#09021b;
+#footer a {
+    color: #b3b3b3;
+    text-decoration: none;
 }
-a:hover {
-    background-color: rgb(212, 212, 204);
-    
-  }
 
-#footer  span  a:hover{
+#footer a:hover {
+    color: var(--primary-color);
     text-decoration: underline;
-    
 }
 
+/* ================================================= */
+/* MODERN INTERFACE OVERRIDES (NAVBAR & HERO)    */
+/* ================================================= */
 
-.b1{
-color: #0a0a0a;
+/* Navbar */
+header.sticky-top .navbar {
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
+.navbar-brand img {
+    height: 45px;
+    object-fit: contain;
+}
+
+.brand-text {
+    line-height: 1.2;
+    color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 600;
+    color: #555 !important;
+    transition: color 0.2s ease;
+    font-size: 15px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+.dropdown-menu {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.dropdown-item {
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.dropdown-item:active {
+    background-color: var(--primary-color);
+}
+
+/* Search & Buttons */
+.search-group .form-control {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-right: none;
+    background-color: #f1f3f5;
+    border-color: #f1f3f5;
+    font-size: 14px;
+    padding: 10px 15px;
+}
+
+.search-group .form-control:focus {
+    box-shadow: none;
+    background-color: #fff;
+    border-color: #dee2e6;
+}
+
+.search-group .btn {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-left: none;
+    background-color: #f1f3f5;
+    color: #6c757d;
+    border-color: #f1f3f5;
+    padding: 0 15px;
+}
+
+.search-group .form-control:focus+.btn {
+    background-color: #fff;
+    border-color: #dee2e6;
+}
+
+.btn-post-item {
+    background: linear-gradient(135deg, #FFC107 0%, #ffca2c 100%);
+    color: #212529;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(255, 193, 7, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-post-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 193, 7, 0.4);
+    color: #000;
+}
+
+#header-search-suggestions {
+    border: none;
+    margin-top: 5px;
+}
+
+#header-search-suggestions .list-group-item {
+    border-left: none;
+    border-right: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#header-search-suggestions .list-group-item:hover {
+    background-color: #f8f9fa;
+    color: var(--primary-color);
+}
+
+/* ================================================= */
+/* INDEX PAGE SPECIFICS (Hero, Cards, Pagination)    */
+/* ================================================= */
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    padding-top: 80px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0a58ca 100%);
+    color: white;
+}
+
+.hero-search-container {
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 50rem;
+    /* Pill shape */
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Hover Animations for Cards */
+.hover-up {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hover-up:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+/* Modern Rounded Pagination */
+.pagination .page-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    border: none;
+    border-radius: 50% !important;
+    /* Makes it a circle */
+    margin: 0 3px;
+    font-weight: 600;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+}
 /* ===================== */
-/* FrontEnd CSS END */
+/* ADMIN LOGIN PAGE      */
 /* ===================== */
+
+/* Special body background only for login page */
+body.admin-login-body {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.login-header {
+    background: #fff;
+    padding: 30px 30px 0;
+    text-align: center;
+}
+
+.brand-logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Input Fields Styling for Login */
+.login-card .form-control:focus {
+    box-shadow: none;
+    border-color: #0d6efd;
+}
+
+.login-card .input-group-text {
+    background: #f8f9fa;
+    border-right: none;
+    border-color: #dee2e6;
+}
+
+.login-card .form-control {
+    border-left: none;
+    padding-left: 0;
+    border-color: #dee2e6;
+}
+
+/* Fix z-index for input group focus */
+.login-card .input-group .form-control:focus { 
+    z-index: 1; 
+}
+
+.login-card .btn-outline-secondary:hover {
+    background-color: transparent;
+    color: #333;
+}
